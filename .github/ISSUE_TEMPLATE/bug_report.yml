@@ -1,0 +1,92 @@
+name: Bug report
+description: Something behaves incorrectly
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before you write: **do not paste participant data, credentials, or health information into this issue** — including inside logs, screenshots or stack traces. Redact first. Issues are permanent, and private repositories are visible to the whole organisation.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is wrong, in a sentence or two?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: How can someone else see this happen? Include the command, script or interaction, and any config or seed needed.
+      placeholder: |
+        1. Run ...
+        2. With config ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, language and package versions, hardware or device if relevant, and the commit or branch you are on.
+      placeholder: |
+        OS: macOS 15.2
+        Python: 3.11.7
+        Device: Polar H10
+        Commit: a1b2c3d
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or error output
+      description: Paste relevant output. **Redact any participant identifiers, file paths containing participant names, or credentials before pasting.**
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Only if they help. Check the whole image — screenshots often capture file names, participant IDs, dashboards or open windows you did not intend to share.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - Blocking — work cannot continue
+        - Affects a research result or output
+        - Significant but has a workaround
+        - Minor
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: data-check
+    attributes:
+      label: Data check
+      options:
+        - label: I have checked this issue, including logs and screenshots, for participant data, health information and credentials.
+          required: true

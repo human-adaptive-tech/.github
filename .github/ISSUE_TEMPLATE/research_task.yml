@@ -1,0 +1,105 @@
+name: Research task
+description: Work driven by a research question rather than a defect or feature
+title: "[Research]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For work where the point is to answer something, not to ship something.
+
+        **This is a work item, not an ethics record.** Do not paste protocol documents, approval correspondence, participant information or study data here. The ethics field below asks you to confirm cover exists — it does not document it.
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Research objective
+      description: What are we trying to find out or establish?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Project or study context
+      description: Which project or study does this belong to, and where does this task sit within it? Keep it to what is appropriate for this repository.
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question or hypothesis
+      description: State it precisely enough that we could tell whether it has been answered. Exploratory work can say so — "we do not yet know what to expect" is a legitimate answer.
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: What needs to be built or changed
+      description: The technical work implied — a pipeline, an analysis, an instrumented condition, a change to a prototype.
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Expected output
+      description: What exists at the end? A figure, a metric, a working component, a written finding, a decision.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: What must happen first — data collection, another task, equipment, access, someone else's work?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: ethics
+    attributes:
+      label: Ethics and data considerations
+      description: Does this task involve participant data, recordings, or anything collected from people?
+      options:
+        - "No participant data involved"
+        - "Involves participant data — covered by existing approval"
+        - "Involves participant data — cover not yet confirmed"
+        - "Unsure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: data-handling
+    attributes:
+      label: Where will any data live?
+      description: If this task touches data, say where it is stored and how it reaches the analysis. Data belongs in approved research storage, not in this repository. Write "no data" if none applies.
+    validations:
+      required: true
+
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation or measurement
+      description: How will we know the result is sound? Sanity checks, comparison against a known baseline, a second analysis path, or review by someone else.
+    validations:
+      required: true
+
+  - type: textarea
+    id: completion
+    attributes:
+      label: Completion criteria
+      description: What has to be true for this to be closed?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before submitting
+      options:
+        - label: This issue contains no participant data, study documents or approval correspondence.
+          required: true
+        - label: If this task involves participant data and cover is not yet confirmed, I will check before starting rather than after.
+          required: false

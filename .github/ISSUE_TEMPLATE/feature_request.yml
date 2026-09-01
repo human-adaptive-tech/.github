@@ -1,0 +1,85 @@
+name: Feature request
+description: Propose a new capability or an improvement
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem before the solution. The reusability question near the end matters — it is how the Studio notices that something is worth generalising.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is difficult, missing or slow at the moment? Describe the situation, not the feature.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed capability
+      description: What should exist? A rough sketch is fine — this does not need to be a design.
+    validations:
+      required: true
+
+  - type: textarea
+    id: users
+    attributes:
+      label: Who would use this
+      description: Researchers, developers, study participants, analysts? Be specific — "everyone" usually means the need is not yet clear.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Research or project context
+      description: What is this for? Name the project or study only as far as is appropriate for this repository — do not include unpublished detail or partner information.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What else could solve this, including doing nothing or using an existing library?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: reusability
+    attributes:
+      label: Could this capability be useful beyond one project?
+      description: The Studio extracts shared components when a second real project needs them — not in anticipation. An honest "no" is as useful as a yes.
+      options:
+        - "No — specific to this project"
+        - "Possibly — worth revisiting if another project needs it"
+        - "Yes — another project already needs this"
+        - "Unsure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reusability-detail
+    attributes:
+      label: If another project already needs it, which one?
+      description: Naming the second consumer is what turns a maybe into a decision. Leave blank if not applicable.
+    validations:
+      required: false
+
+  - type: textarea
+    id: data
+    attributes:
+      label: Data implications
+      description: Would this read, produce, move or store data? Would any of it be participant data or derived from it? Where would it live? Write "none" if it touches no data.
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and open questions
+      description: What could go wrong, what is uncertain, and what would need deciding first? Include ethical or governance concerns if any apply.
+    validations:
+      required: false

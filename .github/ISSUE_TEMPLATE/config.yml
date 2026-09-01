@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security or exposed credential
+    url: https://github.com/human-adaptive-tech/.github/blob/main/SECURITY.md
+    about: Do not open an issue. Report security problems and exposed credentials privately.
+  - name: Access, data, licensing or release questions
+    url: https://github.com/human-adaptive-tech/.github/blob/main/SUPPORT.md
+    about: These go to your project lead or the Organisation Owner, not to an issue.
